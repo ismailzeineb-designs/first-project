@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {Directives} from './directives/directives';
 import {PipeEX} from './pipe-ex/pipe-ex';
@@ -9,7 +9,10 @@ import {PipeEX} from './pipe-ex/pipe-ex';
   imports: [
     FormsModule,
     Directives,
-    PipeEX
+    PipeEX,
+    RouterLinkActive,
+    RouterOutlet,
+    RouterLink
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

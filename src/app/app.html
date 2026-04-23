@@ -1,60 +1,19 @@
-<!--<h1>interpolation </h1>-->
-<!--<p>{{name}}</p>-->
-<!--<div class="galerie">-->
-<!--  <h2>Galerie</h2>-->
-<!--  <img [src]="imageSelectionnee.src"-->
-<!--       [alt]="imageSelectionnee.alt"-->
-<!--       style="width:300px; height:225px;">-->
-<!--  <p>{{ imageSelectionnee.titre }}</p>-->
-<!--  <button [disabled]="boutonDesactive">Bouton désactivé</button>-->
-<!--</div>-->
+<nav class="navbar">
+  <div class="nav-container">
+    <a routerLink="/" class="logo">MonApp</a>
+    <ul class="nav-menu">
+      <li><a routerLink="/" routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: true}">Accueil</a></li>
+      <li><a routerLink="/products" routerLinkActive="active">Produits</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">À propos</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer class="footer">
+  <p>&copy; 2026 MonApp - Tous droits réservés</p>
+</footer>
 
-
-<!--&lt;!&ndash;Event binding!&ndash;&gt;-->
-<!--<button (click)="onClick()">Cliquer</button>-->
-
-<!--<div class="container">-->
-<!--  <div class="formulaire">-->
-<!--    <h2>Modifier mon profil</h2>-->
-<!--    <div class="champ">-->
-<!--      <label>Prénom :</label>-->
-<!--      <input [(ngModel)]="profil.prenom" placeholder="+Votre prénom">-->
-<!--    </div>-->
-<!--    <div class="champ">-->
-<!--      <label>Nom :</label>-->
-<!--      <input [(ngModel)]="profil.nom" placeholder="Votre nom">-->
-<!--    </div>-->
-<!--    <div class="champ">-->
-<!--      <label>Age :</label>-->
-<!--      <input type="number" [(ngModel)]="profil.age">-->
-<!--    </div>-->
-<!--    <div class="champ">-->
-<!--      <label>Email :</label>-->
-<!--      <input type="email" [(ngModel)]="profil.email">-->
-<!--    </div>-->
-<!--    <div class="champ">-->
-<!--      <label>Biographie :</label>-->
-<!--      <textarea [(ngModel)]="profil.biographie" rows="4"></textarea>-->
-<!--    </div>-->
-<!--    <div class="champ">-->
-<!--      <label>Thème :</label>-->
-<!--      <select [(ngModel)]="profil.theme">-->
-<!--        <option value="clair">Clair</option>-->
-<!--        <option value="sombre">Sombre</option>-->
-<!--        <option value="bleu">Bleu</option>-->
-<!--      </select>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  &lt;!&ndash; Aperçu en temps réel &ndash;&gt;-->
-<!--  <div class="apercu" [class]="'theme-' + profil.theme">-->
-<!--    <h2>Aperçu du profil</h2>-->
-<!--    <div class="avatar">{{ getInitiales() }}</div>-->
-<!--    <h3>{{ profil.prenom }} {{ profil.nom }}</h3>-->
-<!--    <p>{{ profil.age }} ans</p>-->
-<!--    <p>{{ profil.email }}</p>-->
-<!--    <p>{{ profil.biographie || 'Aucune biographie renseignée' }}</p>-->
-<!--    <p>Thème : {{ profil.theme }}</p>-->
-<!--  </div>-->
-<!--</div>-->
-
-<app-pipe-ex></app-pipe-ex>
