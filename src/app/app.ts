@@ -8,8 +8,6 @@ import {PipeEX} from './pipe-ex/pipe-ex';
   selector: 'app-root',
   imports: [
     FormsModule,
-    Directives,
-    PipeEX,
     RouterLinkActive,
     RouterOutlet,
     RouterLink
@@ -42,6 +40,7 @@ export class App {
     biographie: '',
     theme: 'clair'
   };
+  protected login: any;
   getInitiales(): string {
     const p = this.profil.prenom ? this.profil.prenom[0] : '?';
     const n = this.profil.nom ? this.profil.nom[0] : '?';
